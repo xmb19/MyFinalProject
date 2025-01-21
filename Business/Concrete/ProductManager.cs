@@ -22,7 +22,7 @@ namespace Business.Concrete
 
         public List<Product> GetAll()
         {
-            return _productDal.GetAll();
+            return _productDal.GetAll(p=>p.CategoryId==2);
         }
     }
 }
