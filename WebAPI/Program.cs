@@ -20,6 +20,16 @@ builder.Services.AddSingleton<IProductDal, EfProductDal>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+/*
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(builder =>
+{
+    builder.RegisterModule(new AutofacBusiness());
+});
+
+*/
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
