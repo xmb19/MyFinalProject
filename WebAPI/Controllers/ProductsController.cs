@@ -22,6 +22,7 @@ namespace WebAPI.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
+            Thread.Sleep(2000);
             //Dependency Chain -- Bağımlılık zinciri
 
             var result = _productService.GetAll();
