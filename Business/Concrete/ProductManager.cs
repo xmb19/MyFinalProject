@@ -64,7 +64,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Product>> GetAllByCategoryId(int id) //kategori id sine göre sıralama.
         {
-            return new SuccessDataResult<List<Product>> (_productDal.GetAll(p => p.CategoryId == id));
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.CategoryId == id));
         }
 
         [CacheAspect] 
