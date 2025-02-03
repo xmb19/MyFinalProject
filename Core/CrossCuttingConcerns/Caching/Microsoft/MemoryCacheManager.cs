@@ -1,17 +1,17 @@
 ﻿using Core.Utilities.IoC;
 using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+using Microsoft.Extensions.DependencyInjection;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System.Linq;
 
 namespace Core.CrossCuttingConcerns.Caching.Microsoft
 {
     public class MemoryCacheManager : ICacheManager
     {
+        //Adapter Pattern
         IMemoryCache _memoryCache;
 
         public MemoryCacheManager()
@@ -36,7 +36,7 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
 
         public bool IsAdd(string key)
         {
-            return _memoryCache.TryGetValue(key, out _); //bir şey döndürmek istemiyorsam "out _" kullanıyorum
+            return _memoryCache.TryGetValue(key, out _);
         }
 
         public void Remove(string key)
@@ -63,8 +63,8 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
             {
                 _memoryCache.Remove(key);
             }
-
-
+            //23:15 DERSTEYİZ
+            //PUSH BASTIM :)
         }
     }
 }
